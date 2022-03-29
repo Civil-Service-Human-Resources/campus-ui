@@ -1,0 +1,20 @@
+@import '../../styles/settings';
+@import 'foundation-sites/scss/foundation';
+
+.campus-search {
+  @include flex;
+  @include flex-align(null, middle);
+
+  .search-button {
+    border-radius: $global-radius;
+    margin-bottom: 0px;
+    border-color: $black;
+  }
+
+  input[type='search'] {
+    height: auto;
+    min-width: 16.5rem;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+}

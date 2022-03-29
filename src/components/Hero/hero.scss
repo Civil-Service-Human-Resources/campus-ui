@@ -1,0 +1,31 @@
+@import '../../styles/settings';
+@import 'foundation-sites/scss/foundation';
+
+.campus-hero {
+  background: url('../../assets/images/hero.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+
+  .campus-hero-content {
+    @include flex;
+    @include flex-align(null, middle);
+    @include padding(0.75, null, 0.75, null);
+
+    .campus-hero-media,
+    .campus-intro {
+      width: 50%;
+    }
+
+    .campus-intro {
+      background: $white90;
+      @include padding(1.25, 1.5, 1.5, 2);
+      border-top-left-radius: 9px;
+      border-bottom-left-radius: 9px;
+
+      .campus-text-semi {
+        margin-bottom: 1.25rem;
+      }
+    }
+  }
+}

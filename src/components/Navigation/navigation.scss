@@ -1,0 +1,17 @@
+@import '../../styles/settings';
+@import 'foundation-sites/scss/foundation';
+
+.campus-menu {
+  @include menu-simple;
+  font-size: 1.125rem;
+
+  li {
+    &.active {
+      color: $menu-active-color;
+    }
+
+    &:last-child {
+      margin-right: $menu-simple-margin;
+    }
+  }
+}
