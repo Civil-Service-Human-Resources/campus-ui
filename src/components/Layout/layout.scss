@@ -1,0 +1,12 @@
+@import '../../styles/settings';
+@import 'foundation-sites/scss/foundation';
+
+.campus-app {
+  @include flex;
+  @include flex-direction(column);
+  min-height: 100vh;
+
+  .campus-main {
+    @include xy-cell-base('grow');
+  }
+}

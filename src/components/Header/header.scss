@@ -1,0 +1,35 @@
+@import '../../styles/settings';
+@import 'foundation-sites/scss/foundation';
+
+.campus-header {
+  @include position(relative);
+  @include padding(0, 0, 1.25, 0);
+
+  &::after {
+    content: '';
+    display: block;
+    background: url('../../assets/images/top-bar-bottom.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include padding(1.25, null, null, null);
+    @include position(absolute, null, 0, 0, 0);
+  }
+
+  .topbar {
+    min-height: $topbar-height;
+    @include top-bar-container;
+
+    .top-bar-right {
+      @include flex;
+      @include flex-align(null, middle);
+    }
+
+    .top-bar-right {
+      input[type='search'] {
+        margin: 0px;
+        margin-right: 0px;
+      }
+    }
+  }
+}
