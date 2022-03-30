@@ -1,25 +1,12 @@
+import { StrandItem } from './StrandItem';
+import items from './strands.json';
 import './strands.scss';
-
-const StrandItem = () => {
-  return (
-    <div className="campus-strand-wrapper">
-      <div className="campus-container">
-        <div className="campus-strand-item">
-          <h5 className="campus-subtitle font-semi no-margin">Strand 1:</h5>
-          <span className="campus-subtitle no-margin">
-            Foundations of public administration
-          </span>
-        </div>
-      </div>
-    </div>
-  );
-};
 
 export const Strands = () => {
   return (
     <div className="campus-strands">
       <div className="campus-container">
-        <div className="campus-strands__intro font-shadow">
+        <div className="campus-strands__intro">
           <h4 className="campus-subtitle primary font-semi">
             The 5 Learning Strands
           </h4>
@@ -37,9 +24,9 @@ export const Strands = () => {
         </div>
       </div>
       <div className="campus-strands__list">
-        <StrandItem />
-        <StrandItem />
-        <StrandItem />
+        {items.map((item, i) => (
+          <StrandItem key={i} {...item} />
+        ))}
       </div>
     </div>
   );

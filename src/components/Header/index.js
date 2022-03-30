@@ -3,7 +3,7 @@ import { Search } from '../Search';
 import campuslogo from '../../assets/images/campus-logo.png';
 import './header.scss';
 
-const Header = () => {
+export const Header = () => {
   return (
     <div className="campus-header">
       <div className="campus-container">
@@ -20,5 +20,3 @@ const Header = () => {
     </div>
   );
 };
-
-export default Header;
