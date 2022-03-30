@@ -1,0 +1,72 @@
+@import '../../styles/settings';
+@import 'foundation-sites/scss/foundation';
+
+.campus-footer {
+  background: $footer-background;
+  border-top: 1px solid $footer-border-color;
+
+  .campus-container {
+    max-width: 60rem;
+
+    @include breakpoint(large) {
+      @include padding(null, 0, null, 0);
+    }
+  }
+
+  &__meta {
+    @include flex;
+    @include flex-align(center, bottom);
+    @include margin(0, -0.925, 0, -0.925);
+    flex-wrap: wrap;
+
+    &__item {
+      @include margin(0, 0.925, 1.625, 0.925);
+
+      .campus-menu {
+        @include margin(null, null, 1.625, null);
+
+        a {
+          padding: 0;
+          font-size: 1rem;
+          color: $anchor-color;
+          text-underline-offset: 0.1em;
+          text-decoration: $anchor-text-decoration;
+
+          cursor: pointer;
+
+          &:hover,
+          &:focus {
+            color: $anchor-color-hover;
+            @if $anchor-text-decoration-hover != $anchor-text-decoration {
+              text-decoration: $anchor-text-decoration-hover;
+            }
+          }
+        }
+      }
+
+      .flex-child-grow {
+        @include breakpoint(medium) {
+          flex-basis: 20rem;
+        }
+      }
+    }
+
+    svg {
+      @include margin(null, 0.625, null, null);
+    }
+  }
+
+  &__copyright-logo {
+    text-align: center;
+    text-underline-offset: 0.1em;
+    @include display(inline-block);
+
+    p {
+      @include margin(0.75, null, 0, null);
+    }
+  }
+
+  @include breakpoint(medium) {
+    @include padding(2.5, 0, 1.5, 0);
+  }
+}

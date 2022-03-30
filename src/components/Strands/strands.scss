@@ -4,11 +4,11 @@
 .campus-strands {
   &__intro {
     max-width: 845px;
-    @include padding(1.75, 1.25, 1.25, 2);
+    @include padding(1.75, 1.25, 0, 2);
   }
 
   &__list {
-    @include padding(1.125, 0, 1.125, 0);
+    @include padding(1, 0, 2.5, 0);
 
     .campus-strand-wrapper {
       @include position(relative);
@@ -24,7 +24,7 @@
         @include border-radius(20px);
         @include position(relative);
         background: $white;
-        border: 5px solid #ed665a;
+        border: 5px solid;
         width: fit-content;
         z-index: 1;
 
@@ -42,7 +42,21 @@
         z-index: 0;
         top: 50%;
         transform: translateY(-50%);
-        background: linear-gradient(89.98deg, #ec6559 86.22%, rgba(236, 101, 89, 0) 99.76%);
+      }
+
+      @each $name, $color in $strands-palette {
+        &.#{'' + $name} {
+          .campus-strand-item {
+            border-color: $color;
+          }
+          &::after {
+            background: linear-gradient(
+              90deg,
+              $color 86.5%,
+              rgba(255, 255, 255, 0) 100%
+            );
+          }
+        }
       }
     }
   }

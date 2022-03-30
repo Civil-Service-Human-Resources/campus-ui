@@ -1,3 +1,11 @@
+$strands-palette: (
+  navy: #ec6559,
+  sky-blue: #5fbbf4,
+  purple: #785bee,
+  green: #82ca3d,
+  pink: #d2377e,
+);
+
 $foundation-palette: (
   primary: #d2377e,
   secondary: #767676,
@@ -9,6 +17,8 @@ $foundation-palette: (
 $white: #ffffff;
 $white90: rgba(255, 255, 255, 0.9);
 $black: #000000;
+$footer-background: #f3f2f1;
+$footer-border-color: #b1b4b6;
 $menu-active-color: #6c757d;
 
 $button-sizes: (
@@ -28,3 +38,8 @@ $topbar-background: $white;
 $menu-simple-margin: 1.5rem;
 
 $input-radius: 10px;
+
+$anchor-color: #0b0c0c;
+// $anchor-color-hover
+$anchor-text-decoration: underline;
+$anchor-text-decoration-hover: underline;
