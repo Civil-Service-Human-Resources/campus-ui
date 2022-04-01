@@ -9,11 +9,18 @@
     border-radius: $global-radius;
     margin-bottom: 0px;
     border-color: $black;
+
+    &__mobile {
+      display: none;
+      position: relative;
+      padding: 0.25rem 1rem;
+      cursor: $global-button-cursor;
+      border-left: 1px solid $menu-border-color;
+    }
   }
 
   input[type='search'] {
     height: auto;
-    min-width: 16.5rem;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
   }

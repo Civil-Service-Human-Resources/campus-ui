@@ -1,17 +1,70 @@
+@use 'sass:math';
 @import '../../styles/settings';
 @import 'foundation-sites/scss/foundation';
 
-.campus-menu {
-  @include menu-simple;
-  font-size: 1.125rem;
+.campus-navigation {
+  .campus-menu {
+    @include menu-simple;
+    font-size: 1.125rem;
 
-  li {
-    &.active {
-      color: $menu-active-color;
+    li {
+      padding: $menu-items-padding;
+      cursor: $global-button-cursor;
+
+      a {
+        color: $linkColor;
+      }
+
+      &.main-menu-item {
+        &.active {
+          color: $black;
+        }
+
+        & + li {
+          position: relative;
+
+          &::before {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 100%;
+            top: 0;
+            left: math.div(-$menu-simple-margin, 2);
+            background-color: $menu-border-color;
+            position: absolute;
+          }
+        }
+
+        &.is-open {
+          .campus-submenu {
+            display: block;
+          }
+
+          img {
+            transform: rotate(180deg);
+          }
+        }
+      }
     }
+  }
 
-    &:last-child {
-      margin-right: $menu-simple-margin;
+  .campus-menu-trigger {
+    position: relative;
+    padding: 0.4375rem 1rem;
+    border-left: 1px solid $menu-border-color;
+    cursor: $global-button-cursor;
+
+    &__icon {
+      margin-left: -0.275rem;
+      margin-right: 0.175rem;
+    }
+  }
+
+  &.opened {
+    .campus-menu-trigger {
+      &__icon {
+        transform: rotate(180deg);
+      }
     }
   }
 }

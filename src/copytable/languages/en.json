@@ -1,0 +1,85 @@
+{
+  "header": {
+    "menus": [
+      {
+        "label": "Home",
+        "link": "/"
+      },
+      {
+        "label": "About",
+        "link": "/about"
+      },
+      {
+        "label": "Learning Strands",
+        "subMenu": [
+          {
+            "label": "Strand 1: Foundations of public administration",
+            "link": "/strand/foundations-of-public-administration"
+          },
+          {
+            "label": "Strand 2: Working in government",
+            "link": "/strand/working-in-government"
+          },
+          {
+            "label": "Strand 3: Leading and managing",
+            "link": "/strand/leading-and-managing"
+          },
+          {
+            "label": "Strand 4: Specialist skills",
+            "link": "/strand/specialist-skills"
+          },
+          {
+            "label": "Strand 5: Domain knowledge",
+            "link": "/strand/domain-knowledge"
+          }
+        ]
+      }
+    ],
+    "mtrigger": "Menu",
+    "search": {
+      "palceholder": "Search",
+      "button": "Search"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Reimagining the way Government learns",
+      "intro": "Pick and mix from 5 strands to explore new skills and a wide variety of learning",
+      "button": "Find out more about Government Campus"
+    },
+    "strands": {
+      "title": "The 5 Learning Strands",
+      "intro": [
+        "Our new Curriculum is organised into five strands, to make it easy for people to review he training options by category, and quickly recognise why each will improve how they do their job. We want every civil servant to 'pick and mix' from the five strands.",
+        "They are deliberately designed to be complementary, helping people master the full spectrum of skills relevant for their role so they will become more confident and capable public administrators."
+      ],
+      "items": [
+        {
+          "color": "navy",
+          "title": "Strand 1:",
+          "description": "Foundations of public administration"
+        },
+        {
+          "color": "sky-blue",
+          "title": "Strand 2:",
+          "description": "Working in government"
+        },
+        {
+          "color": "purple",
+          "title": "Strand 3:",
+          "description": "Leading and managing"
+        },
+        {
+          "color": "green",
+          "title": "Strand 4:",
+          "description": "Specialist skills"
+        },
+        {
+          "color": "pink",
+          "title": "Strand 5:",
+          "description": "Domain knowledge"
+        }
+      ]
+    }
+  }
+}

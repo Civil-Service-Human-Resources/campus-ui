@@ -1,0 +1,44 @@
+@import 'foundation-sites/scss/foundation';
+@import '../../../../styles/settings';
+
+.campus-navigation {
+  .campus-submenu {
+    display: none;
+    left: 0px;
+    right: 0px;
+    position: fixed;
+    z-index: 1100;
+    background-color: $white;
+    @include margin(1.25);
+
+    .campus-menu {
+      padding: 28px 0px 38px;
+
+      li {
+        width: 50%;
+
+        & + li {
+          margin: 0px;
+        }
+
+        a {
+          text-underline-offset: 0.1em;
+          text-decoration: $anchor-text-decoration;
+        }
+      }
+    }
+
+    &__text {
+      display: block;
+      line-height: 1;
+      color: $linkColor;
+      margin-left: 1rem;
+    }
+
+    &__icon {
+      left: 0px;
+      top: 0.62rem;
+      position: absolute;
+    }
+  }
+}

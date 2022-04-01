@@ -9,7 +9,7 @@ export const Footer = () => {
     <div className="campus-footer">
       <div className="campus-container">
         <div className="campus-footer__meta">
-          <div className="campus-footer__meta__item flex-child-grow">
+          <div className="campus-footer__meta__item">
             <Menu className="campus-menu">
               <Link to="/cookie-policy">
                 <MenuItem>Cookie policy</MenuItem>

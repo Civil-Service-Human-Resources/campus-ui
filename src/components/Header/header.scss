@@ -17,8 +17,21 @@
   }
 
   .topbar {
-    min-height: $topbar-height;
     @include top-bar-container;
+
+    @include breakpointup(large) {
+      height: $topbar-height;
+    }
+
+    @include breakpointdown(large) {
+      height: $topbar-height-mobile;
+
+      .top-bar-left {
+        img {
+          max-width: 156px;
+        }
+      }
+    }
 
     .top-bar-right {
       @include flex;
@@ -26,10 +39,37 @@
     }
 
     .top-bar-right {
-      input[type='search'] {
-        margin: 0px;
-        margin-right: 0px;
+      .campus-search {
+        @include breakpointup(xlarge) {
+          margin-left: 0.5rem;
+        }
+
+        @include breakpointdown(xlarge) {
+          .search-button {
+            &__mobile {
+              display: block;
+            }
+          }
+
+          .search-button,
+          input[type='search'] {
+            display: none;
+          }
+        }
+
+        input[type='search'] {
+          margin: 0px;
+          margin-right: 0px;
+          min-width: 16.5rem;
+        }
       }
+    }
+  }
+
+  @include breakpointdown(medium) {
+    .campus-container {
+      padding-left: 0px;
+      padding-right: 0px;
     }
   }
 }

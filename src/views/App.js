@@ -3,13 +3,18 @@ import { Routes, Route } from 'react-router-dom';
 import Layout from '../components/Layout';
 import { Home } from './Home/Home';
 
+import { DeviceContextProvider } from '../context';
+
 const App = () => {
   return (
-    <Layout>
+    <DeviceContextProvider>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="*" element={<div>No Match</div>} />
+        </Route>
       </Routes>
-    </Layout>
+    </DeviceContextProvider>
   );
 };
 
