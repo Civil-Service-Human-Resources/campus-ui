@@ -9,55 +9,5 @@
 
   &__list {
     @include padding(1, 0, 2.5, 0);
-
-    .campus-strand-wrapper {
-      @include position(relative);
-
-      & + .campus-strand-wrapper {
-        margin-top: 1.5rem;
-      }
-
-      .campus-strand-item {
-        @include flex;
-        @include flex-align(null, middle);
-        @include padding(1.5, 2, 1.5, 2);
-        @include border-radius(20px);
-        @include position(relative);
-        background: $white;
-        border: 5px solid;
-        width: fit-content;
-        z-index: 1;
-
-        h5 {
-          margin-bottom: 0px;
-          margin-right: 0.5rem;
-        }
-      }
-
-      &::after {
-        content: '';
-        display: block;
-        height: 1.875rem;
-        @include position(absolute, null, 0, null, 0);
-        z-index: 0;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-
-      @each $name, $color in $strands-palette {
-        &.#{'' + $name} {
-          .campus-strand-item {
-            border-color: $color;
-          }
-          &::after {
-            background: linear-gradient(
-              90deg,
-              $color 86.5%,
-              rgba(255, 255, 255, 0) 100%
-            );
-          }
-        }
-      }
-    }
   }
 }

@@ -1,4 +1,6 @@
-export const StrandItem = ({ color, title, description }) => {
+import './strand.scss';
+
+export const Strand = ({ color, title, description }) => {
   return (
     <div className={`campus-strand-wrapper ${color}`}>
       <div className="campus-container">

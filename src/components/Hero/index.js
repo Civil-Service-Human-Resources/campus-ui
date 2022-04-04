@@ -1,21 +1,19 @@
 import { Button } from 'react-foundation';
+import { Paragraphs } from '../Paragraph';
 import thumbnail from '../../assets/images/thumbnail.png';
 import './hero.scss';
 
-export const Hero = () => {
+export const Hero = ({ copy }) => {
+  const { title, intro, button } = copy;
+
   return (
     <div className="campus-hero">
       <div className="campus-container">
         <div className="campus-hero-content">
           <div className="campus-intro">
-            <h2 className="campus-title">
-              Reimagining the way Government learns
-            </h2>
-            <p className="campus-text-semi">
-              Pick and mix from 5 strands to explore new skills and a wide
-              variety of learning
-            </p>
-            <Button>Find out more about Government Campus</Button>
+            <h2 className="campus-title">{title}</h2>
+            <Paragraphs className="semi">{intro}</Paragraphs>
+            <Button>{button}</Button>
           </div>
           <div className="campus-hero-media">
             <img src={thumbnail} alt="Welcome to Campus" />

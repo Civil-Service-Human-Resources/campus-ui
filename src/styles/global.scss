@@ -31,7 +31,7 @@
 // @include foundation-tooltip;
 
 // Containers
-// @include foundation-accordion;
+@include foundation-accordion;
 // @include foundation-media-object;
 // @include foundation-orbit;
 // @include foundation-responsive-embed;
@@ -60,10 +60,24 @@
 
 .campus-container {
   width: 100%;
-  padding-left: 10rem;
-  padding-right: 6.5rem;
-  max-width: 1440px;
   margin: 0px auto;
+
+  @include breakpointup(xxlarge) {
+    max-width: 1440px;
+    padding-left: 10rem;
+    padding-right: 6.5rem;
+  }
+
+  @include breakpointbetween(xlarge, xxlarge) {
+    max-width: 1200px;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  @include breakpointdown(xlarge) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
 .campus-title {
@@ -90,12 +104,10 @@
   color: $black;
   font-size: 1.25rem;
   line-height: 120%;
-}
 
-.campus-text-semi {
-  color: $black;
-  font-size: 1.5rem;
-  line-height: 120%;
+  &.semi {
+    font-size: 1.5rem;
+  }
 }
 
 .font-semi {

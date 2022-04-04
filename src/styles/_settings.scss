@@ -1,3 +1,11 @@
+$breakpoints: (
+  small: 0,
+  medium: 768px,
+  large: 1024px,
+  xlarge: 1200px,
+  xxlarge: 1440px,
+);
+
 $strands-palette: (
   navy: #ec6559,
   sky-blue: #5fbbf4,
@@ -17,6 +25,11 @@ $foundation-palette: (
 $white: #ffffff;
 $white90: rgba(255, 255, 255, 0.9);
 $black: #000000;
+
+$linkColor: #1c7397;
+$menu-border-color: #ababab;
+$menu-item-background-active: $white;
+$menu-item-color-active: $black;
 $footer-background: #f3f2f1;
 $footer-border-color: #b1b4b6;
 $menu-active-color: #6c757d;
@@ -31,8 +44,10 @@ $button-sizes: (
 $button-radius: 4px;
 $button-padding: 0.625em 1em;
 $button-margin: 0 0 0 0;
+$global-button-cursor: pointer;
 
-$topbar-height: 7.5rem;
+$topbar-height: 120px;
+$topbar-height-mobile: 60px;
 $topbar-background: $white;
 
 $menu-simple-margin: 1.5rem;
@@ -43,3 +58,29 @@ $anchor-color: #0b0c0c;
 // $anchor-color-hover
 $anchor-text-decoration: underline;
 $anchor-text-decoration-hover: underline;
+
+@function get-breakpoint($key) {
+  @if map-has-key($breakpoints, $key) {
+    @return map-get($breakpoints, $key);
+  } @else {
+    @error 'given $key is not available in $breakpoints';
+  }
+}
+
+@mixin breakpointup($key) {
+  @media only screen and (min-width: #{get-breakpoint($key)}) {
+    @content;
+  }
+}
+
+@mixin breakpointdown($key) {
+  @media only screen and (max-width: #{get-breakpoint($key)}) {
+    @content;
+  }
+}
+
+@mixin breakpointbetween($up, $down) {
+  @media only screen and (min-width: #{get-breakpoint($up)}) and (max-width: #{get-breakpoint($down)}) {
+    @content;
+  }
+}

@@ -1,0 +1,59 @@
+@import 'foundation-sites/scss/foundation';
+@import '../../../../styles/settings';
+
+.campus-mobilemenu {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  z-index: 1100;
+  background-color: $white;
+  @include margin(1.25);
+
+  .nav-item {
+    .accordion-title {
+      color: $linkColor;
+
+      &:not(.sub-navitem) {
+        font-size: 19px;
+        text-decoration: none;
+        @include padding(1.25, 3, 1.25, 3);
+      }
+
+      &::before {
+        display: none;
+      }
+
+      &.has-content {
+        & + .accordion-content {
+          padding: 0px;
+        }
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 12px;
+          height: 22px;
+          width: 29px;
+          top: 20px;
+          background: url('../../../../assets/icons/CaretDown.png');
+        }
+      }
+
+      &.sub-navitem {
+        border: 0px !important;
+        font-size: 16px;
+        line-height: 18px;
+        @include padding(0.75, 3, 0.75, 3);
+      }
+    }
+    &.is-active {
+      .accordion-title {
+        &.has-content {
+          &::after {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+}
