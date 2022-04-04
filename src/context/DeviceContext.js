@@ -14,7 +14,8 @@ export const DeviceContextProvider = ({ children }) => {
       width: window.innerWidth,
       smallSize: window.innerWidth <= 768,
       mediumSize: window.innerWidth <= 1024,
-      largeSize: window.innerWidth >= 1440,
+      xlargeSize: window.innerWidth <= 1200,
+      xxlargeSize: window.innerWidth >= 1440,
     });
   }, []);
 
@@ -33,7 +34,8 @@ export const DeviceContextProvider = ({ children }) => {
         innerHeight: dimension.height,
         smallSize: dimension.smallSize,
         mediumSize: dimension.mediumSize,
-        largeSize: dimension.largeSize,
+        xlargeSize: dimension.xlargeSize,
+        xxlargeSize: dimension.xxlargeSize,
       }}
     >
       {children}

@@ -8,7 +8,7 @@ import './submenu.scss';
 
 export const SubMenu = ({ menu, itemClassName }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const { largeSize } = useContext(DeviceContext);
+  const { xxlargeSize } = useContext(DeviceContext);
   const offest = useTopOffest(isOpen);
   const wrapper = useRef();
 
@@ -26,13 +26,13 @@ export const SubMenu = ({ menu, itemClassName }) => {
     if (!isOpen) {
       return {};
     }
-    if (!largeSize) {
+    if (!xxlargeSize) {
       return { padding: '0 2rem' };
     }
     const parentNode = wrapper.current.parentNode;
     const parentRect = parentNode.getBoundingClientRect();
     return { paddingLeft: parentRect.left };
-  }, [isOpen, largeSize]);
+  }, [isOpen, xxlargeSize]);
 
   const classes = useMemo(() => {
     let base = itemClassName ? itemClassName : '';

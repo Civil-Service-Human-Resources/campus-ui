@@ -51,9 +51,24 @@
             }
           }
 
-          .search-button,
-          input[type='search'] {
-            display: none;
+          &:not(.opened) {
+            .campus-searchinput-wrapper {
+              display: none;
+            }
+          }
+
+          .campus-searchinput-wrapper {
+            position: fixed;
+            left: 0px;
+            right: 0px;
+            z-index: 1100;
+            background-color: $white;
+            @include padding(0.75, 0.75, 0.75, 0.75);
+            @include margin(1.25);
+
+            input[type='search'] {
+              max-width: 100%;
+            }
           }
         }
 
