@@ -11,15 +11,15 @@ export const Footer = () => {
         <div className="campus-footer__meta">
           <div className="campus-footer__meta__item">
             <Menu className="campus-menu">
-              <Link to="/cookie-policy">
-                <MenuItem>Cookie policy</MenuItem>
-              </Link>
-              <Link to="/accessibility-staement">
-                <MenuItem isActive>Accessibility staement</MenuItem>
-              </Link>
-              <Link to="/privacy">
-                <MenuItem>Privacy</MenuItem>
-              </Link>
+              <MenuItem>
+                <Link to="/cookie-policy">Cookie policy </Link>
+              </MenuItem>
+              <MenuItem>
+                <Link to="/accessibility-staement">Accessibility staement</Link>
+              </MenuItem>
+              <MenuItem>
+                <Link to="/privacy">Privacy</Link>
+              </MenuItem>
             </Menu>
             <span>
               <LicenceIcon />

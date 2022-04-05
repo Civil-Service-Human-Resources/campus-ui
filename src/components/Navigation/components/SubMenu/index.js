@@ -2,7 +2,7 @@ import { useContext, useMemo, useRef, useState } from 'react';
 import { MenuList } from '../MenuList';
 import { useClickOutSide, useTopOffest } from '../../../../hooks';
 import { DeviceContext } from '../../../../context';
-import CaretDown from '../../../../assets/icons/CaretDown.png';
+import { CaretDownIcon } from '../../../../assets/icons/CaretDownIcon';
 
 import './submenu.scss';
 
@@ -44,7 +44,7 @@ export const SubMenu = ({ menu, itemClassName }) => {
 
   return (
     <li onClick={openSubMenu} ref={wrapper} className={classes}>
-      <img src={CaretDown} alt="" className="campus-submenu__icon" />
+      <CaretDownIcon className="campus-submenu__icon" />
       <span className="campus-submenu__text">{menu.label}</span>
       <div className="campus-submenu" style={{ ...offest, ...padding }}>
         <MenuList menus={menu.subMenu} className="campus-menu" />

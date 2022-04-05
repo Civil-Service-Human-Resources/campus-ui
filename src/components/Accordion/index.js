@@ -9,6 +9,7 @@ import {
   useMemo,
   useRef,
 } from 'react';
+import { CaretDownIcon } from '../../assets/icons/CaretDownIcon';
 
 const AccordionContext = createContext();
 
@@ -54,6 +55,7 @@ export const AccordionItem = ({
   return (
     <li className={classes1}>
       <Item className={classes2} {...itemProps}>
+        {!link && <CaretDownIcon className="accordion-icon" />}
         {label}
       </Item>
       <div className="accordion-content" ref={contentRef}>

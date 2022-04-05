@@ -70,26 +70,37 @@
 
   @include breakpointbetween(xlarge, xxlarge) {
     max-width: 1200px;
-    padding-left: 2.5rem;
+    padding-left: 1.75rem;
     padding-right: 2.5rem;
   }
 
   @include breakpointdown(xlarge) {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1.75rem;
+    padding-right: 2.5rem;
   }
 }
 
 .campus-title {
   color: get-color(primary);
   line-height: 120%;
-  font-size: 2.875rem;
   margin-bottom: 1rem;
+
+  @include breakpointup(xlarge) {
+    font-size: 2.875rem;
+  }
+
+  @include breakpointbetween(large, xlarge) {
+    font-size: 2.275rem;
+  }
+
+  @include breakpointdown(large) {
+    font-size: 2rem;
+  }
 }
 
 .campus-subtitle {
   line-height: 112%;
-  font-size: 1.875rem;
+  font-size: 1.5rem;
 
   &:not(.no-margin) {
     margin-bottom: 1rem;
@@ -98,15 +109,35 @@
   &.primary {
     color: get-color(primary);
   }
+
+  &.small {
+    font-size: 1rem;
+  }
+
+  @include breakpointup(large) {
+    font-size: 1.875rem;
+
+    &.small {
+      font-size: 1.875rem;
+    }
+  }
 }
 
 .campus-text {
   color: $black;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 120%;
 
   &.semi {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+  }
+
+  @include breakpointup(large) {
+    font-size: 1.25rem;
+
+    &.semi {
+      font-size: 1.5rem;
+    }
   }
 }
 

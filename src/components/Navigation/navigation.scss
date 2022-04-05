@@ -38,10 +38,10 @@
         &.is-open {
           .campus-submenu {
             display: block;
-          }
 
-          img {
-            transform: rotate(180deg);
+            &__icon {
+              transform: rotate(180deg);
+            }
           }
         }
       }
@@ -49,14 +49,15 @@
   }
 
   .campus-menu-trigger {
+    display: flex;
+    align-items: center;
     position: relative;
     padding: 0.4375rem 1rem;
     border-left: 1px solid $menu-border-color;
     cursor: $global-button-cursor;
 
     &__icon {
-      margin-left: -0.275rem;
-      margin-right: 0.175rem;
+      margin-right: 0.5rem;
     }
   }
 
