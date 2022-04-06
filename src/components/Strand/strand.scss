@@ -5,15 +5,16 @@
   @include position(relative);
 
   & + .campus-strand-wrapper {
-    margin-top: 1.5rem;
+    margin-top: 1.625rem;
   }
 
   .campus-strand-item {
     @include flex;
     @include flex-align(null, middle);
-    @include padding(1.5, 2, 1.5, 2);
+    @include padding(1.125, 1.875, 1.375, 1.125);
     @include border-radius(20px);
     @include position(relative);
+    flex-wrap: wrap;
     background: $white;
     border: 5px solid;
     width: fit-content;
@@ -47,6 +48,12 @@
           rgba(255, 255, 255, 0) 100%
         );
       }
+    }
+  }
+
+  @include breakpointup(medium) {
+    .campus-strand-item {
+      @include padding(1.5, 2, 1.5, 2);
     }
   }
 }

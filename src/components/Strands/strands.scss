@@ -2,12 +2,26 @@
 @import 'foundation-sites/scss/foundation';
 
 .campus-strands {
-  &__intro {
-    max-width: 845px;
-    @include padding(1.75, 1.25, 0, 2);
+  @include breakpointdown(large) {
+    &__list {
+      margin-top: 2.375rem;
+    }
+
+    &__intro {
+      margin-top: 1.875rem;
+    }
   }
 
-  &__list {
-    @include padding(1, 0, 2.5, 0);
+  @include breakpointup(large) {
+    &__list {
+      margin-top: 0px;
+      @include padding(1, 0, null, 0);
+    }
+
+    &__intro {
+      max-width: 845px;
+      margin-top: 0px;
+      @include padding(1.75, 1.25, 0, 2);
+    }
   }
 }

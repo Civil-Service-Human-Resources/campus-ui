@@ -2,15 +2,38 @@
 @import 'foundation-sites/scss/foundation';
 
 .campus-hero {
-  background: url('../../assets/images/hero.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center top;
-
   .campus-hero-content {
-    @include flex;
-    @include flex-align(null, middle);
-    @include padding(0.75, null, 0.75, null);
+    @include breakpointdown(large) {
+      .campus-title {
+        margin-top: 2rem;
+        margin-bottom: 1.75rem;
+      }
+
+      .campus-text {
+        margin-bottom: 1.875rem;
+      }
+
+      .campus-hero-media {
+        text-align: center;
+      }
+
+      button {
+        margin-bottom: 1.625rem;
+      }
+    }
+  }
+
+  @include breakpointup(large) {
+    background: url('../../assets/images/hero.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+
+    .campus-hero-content {
+      @include flex;
+      @include flex-align(null, middle);
+      @include padding(0.75, null, 0.75, null);
+    }
 
     .campus-hero-media,
     .campus-intro {
@@ -19,12 +42,21 @@
 
     .campus-intro {
       background: $white90;
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
       @include padding(1.25, 1.5, 1.5, 2);
-      border-top-left-radius: 9px;
-      border-bottom-left-radius: 9px;
 
-      .campus-text-semi {
+      .campus-title {
+        margin-top: 0rem;
         margin-bottom: 1.25rem;
+      }
+
+      .campus-text {
+        margin-bottom: 0.875rem;
+      }
+
+      button {
+        margin-bottom: 0rem;
       }
     }
   }

@@ -2,7 +2,7 @@ import { useContext, useMemo, useState } from 'react';
 import { DeviceContext } from '../../context';
 import { MenuList } from './components/MenuList';
 import { MobileMenu } from './components/MobileMenu';
-import CaretDown from '../../assets/icons/CaretDown.png';
+import { CaretDownIcon } from '../../assets/icons/CaretDownIcon';
 
 import './navigation.scss';
 
@@ -34,7 +34,7 @@ export const Navigation = ({ menus, trigger }) => {
       {smallSize && isOpen && <MobileMenu menus={menus} />}
       {smallSize && (
         <div className="campus-menu-trigger" onClick={onToggleMenu}>
-          <img src={CaretDown} alt="" className="campus-menu-trigger__icon" />
+          <CaretDownIcon alt="" className="campus-menu-trigger__icon" />
           <span>{trigger}</span>
         </div>
       )}
