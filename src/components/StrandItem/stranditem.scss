@@ -1,10 +1,10 @@
 @import 'foundation-sites/scss/foundation';
 @import '../../styles/settings';
 
-.campus-strand-wrapper {
+.campus-stranditem-wrapper {
   @include position(relative);
 
-  & + .campus-strand-wrapper {
+  & + .campus-stranditem-wrapper {
     margin-top: 1.625rem;
   }
 

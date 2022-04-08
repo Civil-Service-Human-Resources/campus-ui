@@ -14,23 +14,23 @@
         "subMenu": [
           {
             "label": "Strand 1: Foundations of public administration",
-            "link": "/strand/foundations-of-public-administration"
+            "link": "/strands/foundations-of-public-administration"
           },
           {
             "label": "Strand 2: Working in government",
-            "link": "/strand/working-in-government"
+            "link": "/strands/working-in-government"
           },
           {
             "label": "Strand 3: Leading and managing",
-            "link": "/strand/leading-and-managing"
+            "link": "/strands/leading-and-managing"
           },
           {
             "label": "Strand 4: Specialist skills",
-            "link": "/strand/specialist-skills"
+            "link": "/strands/specialist-skills"
           },
           {
             "label": "Strand 5: Domain knowledge",
-            "link": "/strand/domain-knowledge"
+            "link": "/strands/domain-knowledge"
           }
         ]
       }

@@ -1,0 +1,68 @@
+@import '../../styles/settings';
+
+.campus-strands-view {
+  margin-top: 2.5rem;
+
+  .campus-strands-inner {
+    padding-right: 3.375rem;
+  }
+
+  .campus-strands-content {
+    margin-top: 2.75rem;
+    padding-left: 4px;
+
+    .campus-strands-title {
+      margin-bottom: 1.375rem;
+
+      h1,
+      h2 {
+        font-size: 2.25rem;
+        line-height: 120%;
+        margin-bottom: 0px;
+      }
+
+      h1 {
+        font-family: Arial;
+        font-weight: 700;
+        color: $strands-title-color;
+      }
+
+      h2 {
+        font-family: Inter;
+        font-weight: 600;
+      }
+    }
+
+    .campus-strands-description {
+      display: grid;
+      gap: 60px;
+      grid-template-columns: 1fr 1fr;
+    }
+    .campus-strands-buttons {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(5, 1fr);
+      margin-top: 3.25rem;
+      margin-bottom: 2.625rem;
+
+      .campus-strands-button {
+        padding: 12px;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.2;
+        color: $white;
+        // width: 205px;
+        height: 74px;
+        // width: 148px;
+        // height: 54px;
+
+        @each $name, $color in $strands-buttons-palette {
+          &.#{'' + $name} {
+            background-color: $color;
+          }
+        }
+      }
+    }
+  }
+}
