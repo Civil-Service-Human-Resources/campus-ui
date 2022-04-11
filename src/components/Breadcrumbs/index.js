@@ -1,6 +1,7 @@
+import { Link } from 'react-router-dom';
 import './breadcrumbs.scss';
 
-export const Breadcrumbs = () => {
+export const Breadcrumbs = ({ list }) => {
   return (
     <nav
       className="campus-breadcrumbs"
@@ -8,9 +9,15 @@ export const Breadcrumbs = () => {
       role="navigation"
     >
       <ul className="breadcrumbs">
-        <li>Home</li>
-        <li>Features</li>
-        <li>Current</li>
+        {list?.map((item) => (
+          <li key={item.label}>
+            {item.link ? (
+              <Link to={item.link}>{item.label}</Link>
+            ) : (
+              <span>{item.label}</span>
+            )}
+          </li>
+        ))}
       </ul>
     </nav>
   );

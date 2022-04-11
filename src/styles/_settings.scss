@@ -1,5 +1,6 @@
 $breakpoints: (
   small: 0,
+  mobile: 568px,
   medium: 768px,
   large: 1024px,
   xlarge: 1200px,
@@ -50,6 +51,8 @@ $footer-border-color: #b1b4b6;
 $menu-active-color: #6c757d;
 $breadcrumbs-background: #f8f9fa;
 $strands-title-color: #68cd00;
+$strands-highlight-color: #ca3887;
+$strands-anchor-color: #007bff;
 
 $button-sizes: (
   tiny: 0.6rem,
@@ -71,6 +74,10 @@ $topbar-background: $white;
 $menu-simple-margin: 1.5rem;
 
 $input-radius: 10px;
+
+$breadcrumbs-item-uppercase: false;
+$breadcrumbs-item-font-size: 1rem;
+$breadcrumbs-item-color: #68717a;
 
 $anchor-color: #0b0c0c;
 // $anchor-color-hover

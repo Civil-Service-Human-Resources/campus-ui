@@ -1,71 +1,48 @@
+import { useContext } from 'react';
+import { useParams } from 'react-router-dom';
+import { getCopy } from '../../copytable';
+import { DeviceContext } from '../../context/DeviceContext';
 import { Breadcrumbs } from '../../components/Breadcrumbs';
-import { Paragraphs } from '../../components/Paragraph';
-import img1 from '../../assets/images/strand-1.png';
+import { StrandContent } from '../../components/StrandContent';
+import { StrandImage } from '../../components/StrandImage';
+import { StrandButtons } from '../../components/StrandButtons';
 
 import './strands.scss';
 
-const buttons = [
-  { label: 'Analysis', key: 'analysis' },
-  { label: 'Commercial', key: 'commercial' },
-  { label: 'Communications', key: 'communications' },
-  { label: 'Digital, Data and Technology', key: 'digital' },
-  { label: 'Finance', key: 'finance' },
-  { label: 'HR', key: 'hr' },
-  { label: 'Operational delivery', key: 'operational' },
-  { label: 'Policy', key: 'policy' },
-  { label: 'Project delivery', key: 'project' },
-  { label: 'Property', key: 'property' },
-  { label: 'Security', key: 'security' },
-  { label: 'Science and engineering', key: 'science' },
-];
+const copy = getCopy('learningStrands');
 
 export const Strands = () => {
+  const { slug } = useParams();
+  const { mediumSize } = useContext(DeviceContext);
+
+  const learningStrand = copy[slug];
+  const breadcrumbs = copy.breadcrumbs;
+
+  if (!learningStrand) {
+    return 'Not Found Strand';
+  }
+
   return (
-    <div className="campus-strands-view">
+    <div className="campus-strand-page">
       <div className="campus-container">
-        <div className="campus-strands-inner">
-          <Breadcrumbs />
-          <div className="campus-strands-content">
-            <div className="campus-strands-title">
-              <h1>Strand 1:</h1>
-              <h2>Foundations of public administration</h2>
-            </div>
-            <div className="campus-strands-description">
-              <div className="campus-strands-text">
-                <Paragraphs>
-                  <span>
-                    Strand 1 covers universally available training and knowledge
-                    to which every new entrant to the Civil Service at every
-                    level is entitled, often as part of an induction or entry
-                    programme.
-                  </span>
-                  <span>
-                    Put simply, this training comprises the essential skills
-                    that ensure we work effectively as public servants.
-                  </span>
-                  <span>
-                    Taught through face-to-face or digital training sessions
-                    with supporting resources, Strand 1 gives everyone an equal
-                    chance to flourish and develop their career in public
-                    administration.
-                  </span>
-                </Paragraphs>
+        <div className="campus-strand-inner">
+          <Breadcrumbs list={breadcrumbs} />
+          <div className="campus-strand-block">
+            <div className="campus-strand-block__text">
+              <div className="campus-strand-title">
+                <h1>{learningStrand.chapter}</h1>
+                <h2>{learningStrand.title}</h2>
               </div>
-              <div className="campus-strands-image">
-                <img src={img1} alt="" />
+              <StrandContent contents={learningStrand.contents} />
+            </div>
+            {!mediumSize && (
+              <div className="campus-strand-block__image">
+                <StrandImage imageName={learningStrand.image} />
               </div>
-            </div>
-            <div className="campus-strands-buttons">
-              {buttons.map((btn) => (
-                <div
-                  key={btn.key}
-                  className={`campus-strands-button ${btn.key}`}
-                >
-                  {btn.label}
-                </div>
-              ))}
-            </div>
+            )}
           </div>
+          <StrandButtons />
+          {mediumSize && <StrandImage imageName={learningStrand.image} />}
         </div>
       </div>
     </div>

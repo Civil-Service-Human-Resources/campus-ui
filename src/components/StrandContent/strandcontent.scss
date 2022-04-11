@@ -1,0 +1,18 @@
+@import '../../styles/settings';
+
+.campus-strand-content {
+  span {
+    &.highlight {
+      font-weight: bold;
+      color: $strands-highlight-color;
+    }
+
+    a {
+      color: $strands-anchor-color;
+    }
+  }
+
+  ul {
+    padding-left: 0.75rem;
+  }
+}

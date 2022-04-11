@@ -8,5 +8,13 @@
     @include breadcrumbs-container;
     @include padding(0.75, 1.25, 0.75, 1.25);
     border-radius: 4px;
+
+    li {
+      color: $breadcrumbs-item-color;
+
+      a {
+        text-decoration: none;
+      }
+    }
   }
 }

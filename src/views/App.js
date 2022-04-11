@@ -12,7 +12,7 @@ const App = () => {
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="/strands/:slug" element={<Strands />} />
+          <Route path="/learning-strands/:slug" element={<Strands />} />
           <Route path="*" element={<div>No Match</div>} />
         </Route>
       </Routes>

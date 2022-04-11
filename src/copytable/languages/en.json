@@ -14,23 +14,23 @@
         "subMenu": [
           {
             "label": "Strand 1: Foundations of public administration",
-            "link": "/strands/foundations-of-public-administration"
+            "link": "/learning-strands/foundations-of-public-administration"
           },
           {
             "label": "Strand 2: Working in government",
-            "link": "/strands/working-in-government"
+            "link": "/learning-strands/working-in-government"
           },
           {
             "label": "Strand 3: Leading and managing",
-            "link": "/strands/leading-and-managing"
+            "link": "/learning-strands/leading-and-managing"
           },
           {
             "label": "Strand 4: Specialist skills",
-            "link": "/strands/specialist-skills"
+            "link": "/learning-strands/specialist-skills"
           },
           {
             "label": "Strand 5: Domain knowledge",
-            "link": "/strands/domain-knowledge"
+            "link": "/learning-strands/domain-knowledge"
           }
         ]
       }
@@ -80,6 +80,72 @@
           "description": "Domain knowledge"
         }
       ]
+    }
+  },
+  "learningStrands": {
+    "breadcrumbs": [
+      {
+        "link": "/",
+        "label": "Home"
+      },
+      {
+        "label": "Learning Strands"
+      }
+    ],
+    "foundations-of-public-administration": {
+      "chapter": "Strand 1:",
+      "title": "Foundations of public administration",
+      "contents": [
+        "Strand 1 covers universally available training and knowledge to which every new entrant to the Civil Service at every level is entitled, often as part of an induction or entry programme.",
+        "Put simply, this training comprises the essential skills that ensure we work effectively as public servants.",
+        "Taught through face-to-face or digital training sessions with supporting resources, Strand 1 gives everyone an equal chance to flourish and develop their career in public administration."
+      ],
+      "image": "strand1"
+    },
+    "working-in-government": {
+      "chapter": "Strand 2:",
+      "title": "Working in Government",
+      "contents": [
+        "Working in government is a vast topic, ranging from basic awareness through to specialist expertise - but the common themes throughout a Civil Service career will include things like managing public money, understanding the relationship with ministers and Parliament, and having a basic grasp of other professional areas and how to work with them.",
+        "Our <a href='#'>new induction course</a> is designed to give new joiners a basic awareness of the Civil Service and how government works"
+      ],
+      "image": "strand2"
+    },
+    "leading-and-managing": {
+      "title": "Leading and managing",
+      "chapter": "Strand 3:",
+      "contents": [
+        "Strand 3 programmes will offer relevant practical skills, reflecting the time and focus it takes to reach the threshold standards expected of those in the Civil Service with leadership and management responsibilities – whether they are leaders of small teams or Permanent Secretaries.",
+        "We want to create a cadre with unrivalled management and leadership skills, who through this training in essential skills develop an instinctive grasp of how, when and where to work with and through one another."
+      ],
+      "image": "strand3"
+    },
+    "specialist-skills": {
+      "title": "Specialist skills",
+      "chapter": "Strand 4:",
+      "contents": [
+        "Led by the professions for the professions, Strand 4 of the Government Campus  curriculum develops specialist skills through accredited training and professional development for profession and function members.",
+        "There are <span class='highlight'>28 recognised professions</span>",
+        "Government professions develop the capability of a group of people with particular skills, knowledge or expertise. They work across government on behalf of departments, agencies and functions. An individual can belong to more than one government profession.",
+        "There are <span class='highlight'>14 functions</span>",
+        "A function is a grouping aligned across government, embedded into departments and arm’s length bodies. A function supports improved outcomes across government, defining what needs to be done, and how, for the effective undertaking of work within its scope."
+      ],
+      "image": "strand4"
+    },
+    "domain-knowledge": {
+      "title": "Domain knowledge",
+      "chapter": "Strand 5:",
+      "contents": [
+        "Government Campus helps departments make training more widely available, across organisational and technical boundaries. Domain Knowledge is the knowledge and understanding civil servants need to work effectively in their specific subject area.",
+        "Specific subject areas usually relate to departments, for example, health, education or transport. A specific subject area may also be relevant to more than one government department and profession, for example, climate change.",
+        "The types of training in the Domain Knowledge strand are those being developed within departments and across departments for all civil servants to access. You will seek domain knowledge if:",
+        [
+          "You are interested in a particular department and want to know what general training they provide in their own areas",
+          "You need to learn about a policy area that crosses departments, for example, climate change (Net Zero)",
+          "You are creating subject matter training which you know will benefit others across government"
+        ]
+      ],
+      "image": "strand5"
     }
   }
 }

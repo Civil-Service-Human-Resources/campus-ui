@@ -1,67 +1,72 @@
 @import '../../styles/settings';
 
-.campus-strands-view {
-  margin-top: 2.5rem;
-
-  .campus-strands-inner {
-    padding-right: 3.375rem;
+.campus-strand-page {
+  @include breakpointup(medium) {
+    margin-top: 2.5rem;
   }
 
-  .campus-strands-content {
+  .campus-strand-inner {
+    @include breakpointup(xlarge) {
+      padding-right: 3.375rem;
+    }
+
+    @include breakpointdown(large) {
+      .campus-strand-image {
+        margin-bottom: 2.625rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .campus-strand-block {
     margin-top: 2.75rem;
     padding-left: 4px;
 
-    .campus-strands-title {
-      margin-bottom: 1.375rem;
-
-      h1,
-      h2 {
-        font-size: 2.25rem;
-        line-height: 120%;
-        margin-bottom: 0px;
-      }
-
-      h1 {
-        font-family: Arial;
-        font-weight: 700;
-        color: $strands-title-color;
-      }
-
-      h2 {
-        font-family: Inter;
-        font-weight: 600;
-      }
+    @include breakpointup(large) {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
-    .campus-strands-description {
-      display: grid;
-      gap: 60px;
-      grid-template-columns: 1fr 1fr;
+    @include breakpointdown(medium) {
+      margin-top: 1rem;
     }
-    .campus-strands-buttons {
-      display: grid;
-      gap: 1rem;
-      grid-template-columns: repeat(5, 1fr);
-      margin-top: 3.25rem;
-      margin-bottom: 2.625rem;
 
-      .campus-strands-button {
-        padding: 12px;
-        border-radius: 10px;
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 1.2;
-        color: $white;
-        // width: 205px;
-        height: 74px;
-        // width: 148px;
-        // height: 54px;
+    &__text {
+      .campus-strand-title {
+        margin-bottom: 1.375rem;
 
-        @each $name, $color in $strands-buttons-palette {
-          &.#{'' + $name} {
-            background-color: $color;
-          }
+        h1,
+        h2 {
+          font-size: 2.25rem;
+          line-height: 120%;
+          margin-bottom: 0px;
         }
+
+        h1 {
+          font-family: Arial;
+          font-weight: 700;
+          color: $strands-title-color;
+        }
+
+        h2 {
+          font-family: Inter;
+          font-weight: 600;
+        }
+      }
+    }
+
+    &__image {
+      min-width: 450px;
+
+      img {
+        max-width: 100%;
       }
     }
   }

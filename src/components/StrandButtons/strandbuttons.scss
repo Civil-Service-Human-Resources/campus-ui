@@ -1,0 +1,46 @@
+@import '../../styles/settings';
+
+.campus-strand-buttons {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 3.25rem;
+  margin-bottom: 2.625rem;
+
+  @include breakpointdown(xlarge) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include breakpointdown(large) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include breakpointdown(medium) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpointdown(mobile) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .campus-strands-button {
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: $white;
+    height: 74px;
+
+    @include breakpointdown(mobile) {
+      height: 54px;
+      font-size: 18px;
+    }
+
+    @each $name, $color in $strands-buttons-palette {
+      &.#{'' + $name} {
+        background-color: $color;
+      }
+    }
+  }
+}
