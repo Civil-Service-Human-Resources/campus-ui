@@ -15,7 +15,9 @@ export const Footer = () => {
                 <Link to="/cookie-policy">Cookie policy </Link>
               </MenuItem>
               <MenuItem>
-                <Link to="/accessibility-staement">Accessibility staement</Link>
+                <Link to="/accessibility-statement">
+                  Accessibility statement
+                </Link>
               </MenuItem>
               <MenuItem>
                 <Link to="/privacy">Privacy</Link>
