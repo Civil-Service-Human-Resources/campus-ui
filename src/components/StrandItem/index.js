@@ -1,8 +1,8 @@
-import './strand.scss';
+import './stranditem.scss';
 
-export const Strand = ({ color, title, description }) => {
+export const StrandItem = ({ color, title, description }) => {
   return (
-    <div className={`campus-strand-wrapper ${color}`}>
+    <div className={`campus-stranditem-wrapper ${color}`}>
       <div className="campus-container">
         <div className="campus-strand-item">
           <h5 className="campus-subtitle font-semi small no-margin">{title}</h5>

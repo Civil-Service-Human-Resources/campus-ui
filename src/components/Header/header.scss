@@ -33,6 +33,14 @@
       }
     }
 
+    @include breakpointdown(mobile) {
+      .top-bar-left {
+        img {
+          max-width: 100px;
+        }
+      }
+    }
+
     .top-bar-right {
       @include flex;
       @include flex-align(null, middle);
@@ -83,7 +91,6 @@
 
   @include breakpointdown(medium) {
     .campus-container {
-      padding-left: 0px;
       padding-right: 0px;
     }
   }

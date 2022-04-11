@@ -1,7 +1,7 @@
 @import '../../styles/settings';
 @import 'foundation-sites/scss/foundation';
 
-.campus-strands {
+.campus-strandlist-container {
   @include breakpointdown(large) {
     &__list {
       margin-top: 2.375rem;
