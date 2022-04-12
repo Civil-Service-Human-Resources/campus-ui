@@ -107,7 +107,7 @@
       "title": "Working in Government",
       "contents": [
         "Working in government is a vast topic, ranging from basic awareness through to specialist expertise - but the common themes throughout a Civil Service career will include things like managing public money, understanding the relationship with ministers and Parliament, and having a basic grasp of other professional areas and how to work with them.",
-        "Our <a href='#'>new induction course</a> is designed to give new joiners a basic awareness of the Civil Service and how government works"
+        "Our <a href='https://www.gov.uk/guidance/register-for-an-induction-to-the-civil-service' target='_blank'>new induction course</a> is designed to give new joiners a basic awareness of the Civil Service and how government works"
       ],
       "image": "strand2"
     },
@@ -147,5 +147,29 @@
       ],
       "image": "strand5"
     }
+  },
+  "about": {
+    "breadcrumbs": [
+      {
+        "link": "/",
+        "label": "Home"
+      },
+      {
+        "label": "About"
+      }
+    ],
+    "title": "What is the Government Campus?",
+    "contents": [
+      "The Government Skills and Curriculum Unit (GSCU) published its plan for creating a Government Campus and new curriculum for all civil servants: <a href='https://www.gov.uk/government/publications/the-new-curriculum-and-campus-for-government-skills/better-training-knowledge-and-networks-the-new-curriculum-and-campus-for-government-skills' target='_blank'>Better Training, Skills and Networks</a> in January 2021.",
+      "The Government Campus will unite all government training, whether provided centrally, or designed and delivered by professions, functions, and departments.",
+      "United by a clear, assured curriculum framework, the Government Campus exists for, and is owned by, all of us in government. Providing civil servants and ministers with the tools they need to succeed.",
+      "The Government Campus will evolve, providing clarity, assurance, and accessibility of L&D, to everyone across the UK Civil Service. Whatever role you hold, whatever level youwork at, and often in partnership with the wider public sector.",
+      "Find out more about Government Campus. You can:",
+      [
+        "Receive monthly updates on the Government Campus by <a href='https://cabinetoffice.us7.list-manage.com/subscribe?u=cca5034f3c5b7f68f7b2bea00&id=1eb0626b43' target='_blank'>signing up to Campus News.</a>",
+        "Find out more about <a href='https://www.gov.uk/government/organisations/government-skills-and-curriculum-unit?cachebust=1632223774' target='_blank'>GSCU Business Plan</a> and news around the Government Campus on <a href='https://www.gov.uk/government/publications/government-skills-and-curriculum-unit-business-plan-202122' target='_blank'>GOV.UK/GSCU</a>",
+        "Talk to your Learning and Development teams"
+      ]
+    ]
   }
 }
