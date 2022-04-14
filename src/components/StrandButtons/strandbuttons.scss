@@ -30,15 +30,16 @@
     font-weight: 700;
     line-height: 1.2;
     color: $white;
-    height: 74px;
+    min-height: 74px;
 
     @include breakpointdown(mobile) {
-      height: 54px;
+      min-height: 54px;
       font-size: 18px;
     }
 
     @each $name, $color in $strands-buttons-palette {
-      &.#{'' + $name} {
+      $i: index($strands-buttons-palette, $name $color);
+      &.#{'category_' + $i} {
         background-color: $color;
       }
     }

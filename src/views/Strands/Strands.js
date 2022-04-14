@@ -1,11 +1,12 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getCopy } from '../../copytable';
 import { DeviceContext } from '../../context/DeviceContext';
 import { Breadcrumbs } from '../../components/Breadcrumbs';
-import { StrandContent } from '../../components/StrandContent';
+import { CampusContent } from '../../components/CampusContent';
 import { StrandImage } from '../../components/StrandImage';
 import { StrandButtons } from '../../components/StrandButtons';
+import { getStrandCategoriesApi } from '../../services/strands';
 
 import './strands.scss';
 
@@ -13,10 +14,25 @@ const copy = getCopy('learningStrands');
 
 export const Strands = () => {
   const { slug } = useParams();
+  const [categories, setCategories] = useState([]);
   const { mediumSize } = useContext(DeviceContext);
 
   const learningStrand = copy[slug];
   const breadcrumbs = copy.breadcrumbs;
+
+  useEffect(() => {
+    if (learningStrand && learningStrand.id) {
+      (async () => {
+        try {
+          const response = await getStrandCategoriesApi(learningStrand.id);
+          const { categoriesToDisplay } = response;
+          setCategories(categoriesToDisplay);
+        } catch (error) {
+          setCategories([]);
+        }
+      })();
+    }
+  }, [learningStrand]);
 
   if (!learningStrand) {
     return 'Not Found Strand';
@@ -33,7 +49,7 @@ export const Strands = () => {
                 <h1>{learningStrand.chapter}</h1>
                 <h2>{learningStrand.title}</h2>
               </div>
-              <StrandContent contents={learningStrand.contents} />
+              <CampusContent contents={learningStrand.contents} />
             </div>
             {!mediumSize && (
               <div className="campus-strand-block__image">
@@ -41,7 +57,7 @@ export const Strands = () => {
               </div>
             )}
           </div>
-          <StrandButtons />
+          <StrandButtons categories={categories} />
           {mediumSize && <StrandImage imageName={learningStrand.image} />}
         </div>
       </div>
