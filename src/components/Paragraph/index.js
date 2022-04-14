@@ -12,8 +12,8 @@ export const Paragraphs = ({ children, className }) => {
   const arr = useMemo(() => Children.toArray(children), [children]);
 
   return arr.map((x, i) => (
-    <div className={classes} key={i}>
+    <p className={classes} key={i}>
       {x}
-    </div>
+    </p>
   ));
 };
