@@ -1,14 +1,14 @@
 @import '../../styles/settings';
 
-.campus-strand-content {
+.campus-content-wrapper {
   span {
     &.highlight {
       font-weight: bold;
-      color: $strands-highlight-color;
+      color: $highlight-color;
     }
 
     a {
-      color: $strands-anchor-color;
+      color: $linkColor;
     }
   }
 

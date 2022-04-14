@@ -1,0 +1,64 @@
+@import '../../styles/settings';
+@import 'foundation-sites/scss/foundation';
+
+.campus-about-page {
+  @include breakpointup(medium) {
+    margin-top: 2.5rem;
+  }
+
+  .campus-breadcrumbs {
+    @include breakpointup(xlarge) {
+      margin-right: 3.375rem;
+    }
+
+    @include breakpointdown(medium) {
+      .breadcrumbs {
+        padding-bottom: 0px !important;
+      }
+    }
+  }
+
+  .campus-about-inner {
+    @include breakpointup(medium) {
+      padding-top: 1.5rem;
+      padding-left: 1.375rem;
+    }
+
+    h1 {
+      font-family: 'Inter';
+      font-weight: 600;
+      line-height: 120%;
+      font-size: 1.125rem;
+
+      @include breakpointdown(medium) {
+        color: get-color(primary);
+        margin-bottom: 1.25rem;
+      }
+
+      @include breakpointup(medium) {
+        font-size: 2.25rem;
+        margin-bottom: 2.5rem;
+      }
+    }
+  }
+
+  .campus-about-content {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 2.5rem;
+
+    .campus-content-wrapper {
+      flex: 1;
+      margin-bottom: 2rem;
+    }
+
+    img {
+      margin-left: 1.25rem;
+      width: 330px;
+
+      @include breakpointdown(large) {
+        display: none;
+      }
+    }
+  }
+}

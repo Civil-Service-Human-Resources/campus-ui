@@ -1,15 +1,15 @@
 import { Paragraphs } from '../Paragraph';
 
-import './strandcontent.scss';
+import './campuscontent.scss';
 
-export const StrandContent = ({ contents }) => {
+export const CampusContent = ({ contents }) => {
   return (
-    <div className="campus-strand-content">
+    <div className="campus-content-wrapper">
       <Paragraphs>
         {contents?.map((content, index) => {
           if (Array.isArray(content)) {
             return (
-              <ul>
+              <ul key={index}>
                 {content.map((liContent, liIndex) => (
                   <li key={`${index}_${liIndex}`}>
                     <span dangerouslySetInnerHTML={{ __html: liContent }} />
