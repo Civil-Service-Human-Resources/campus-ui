@@ -93,6 +93,7 @@
       }
     ],
     "foundations-of-public-administration": {
+      "id": 1,
       "chapter": "Strand 1:",
       "title": "Foundations of public administration",
       "contents": [
@@ -103,6 +104,7 @@
       "image": "strand1"
     },
     "working-in-government": {
+      "id": 2,
       "chapter": "Strand 2:",
       "title": "Working in Government",
       "contents": [
@@ -112,6 +114,7 @@
       "image": "strand2"
     },
     "leading-and-managing": {
+      "id": 3,
       "title": "Leading and managing",
       "chapter": "Strand 3:",
       "contents": [
@@ -121,6 +124,7 @@
       "image": "strand3"
     },
     "specialist-skills": {
+      "id": 4,
       "title": "Specialist skills",
       "chapter": "Strand 4:",
       "contents": [
@@ -133,6 +137,7 @@
       "image": "strand4"
     },
     "domain-knowledge": {
+      "id": 5,
       "title": "Domain knowledge",
       "chapter": "Strand 5:",
       "contents": [
