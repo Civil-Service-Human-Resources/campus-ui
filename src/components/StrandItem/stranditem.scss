@@ -17,6 +17,7 @@
     flex-wrap: wrap;
     background: $white;
     border: 5px solid;
+    text-decoration: none;
     width: fit-content;
     z-index: 1;
 
@@ -44,6 +45,10 @@
     &.#{'' + $name} {
       .campus-strand-item {
         border-color: $color;
+        &:hover {
+          background-color: $color;
+          color: $white;
+        }
       }
       &::after {
         background: linear-gradient(

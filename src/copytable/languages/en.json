@@ -57,27 +57,32 @@
         {
           "color": "navy",
           "title": "Strand 1:",
-          "description": "Foundations of public administration"
+          "description": "Foundations of public administration",
+          "path": "/learning-strands/foundations-of-public-administration"
         },
         {
           "color": "sky-blue",
           "title": "Strand 2:",
-          "description": "Working in government"
+          "description": "Working in government",
+          "path": "/learning-strands/working-in-government"
         },
         {
           "color": "purple",
           "title": "Strand 3:",
-          "description": "Leading and managing"
+          "description": "Leading and managing",
+          "path": "/learning-strands/leading-and-managing"
         },
         {
           "color": "green",
           "title": "Strand 4:",
-          "description": "Specialist skills"
+          "description": "Specialist skills",
+          "path": "/learning-strands/specialist-skills"
         },
         {
           "color": "pink",
           "title": "Strand 5:",
-          "description": "Domain knowledge"
+          "description": "Domain knowledge",
+          "path": "/learning-strands/domain-knowledge"
         }
       ]
     }
