@@ -6,6 +6,7 @@
   grid-template-columns: repeat(5, 1fr);
   margin-top: 3.25rem;
   margin-bottom: 2.625rem;
+  text-transform: capitalize;
 
   @include breakpointdown(xlarge) {
     grid-template-columns: repeat(4, 1fr);

@@ -57,27 +57,32 @@
         {
           "color": "navy",
           "title": "Strand 1:",
-          "description": "Foundations of public administration"
+          "description": "Foundations of public administration",
+          "path": "/learning-strands/foundations-of-public-administration"
         },
         {
           "color": "sky-blue",
           "title": "Strand 2:",
-          "description": "Working in government"
+          "description": "Working in government",
+          "path": "/learning-strands/working-in-government"
         },
         {
           "color": "purple",
           "title": "Strand 3:",
-          "description": "Leading and managing"
+          "description": "Leading and managing",
+          "path": "/learning-strands/leading-and-managing"
         },
         {
           "color": "green",
           "title": "Strand 4:",
-          "description": "Specialist skills"
+          "description": "Specialist skills",
+          "path": "/learning-strands/specialist-skills"
         },
         {
           "color": "pink",
           "title": "Strand 5:",
-          "description": "Domain knowledge"
+          "description": "Domain knowledge",
+          "path": "/learning-strands/domain-knowledge"
         }
       ]
     }
@@ -93,6 +98,7 @@
       }
     ],
     "foundations-of-public-administration": {
+      "id": 1,
       "chapter": "Strand 1:",
       "title": "Foundations of public administration",
       "contents": [
@@ -103,6 +109,7 @@
       "image": "strand1"
     },
     "working-in-government": {
+      "id": 2,
       "chapter": "Strand 2:",
       "title": "Working in Government",
       "contents": [
@@ -112,6 +119,7 @@
       "image": "strand2"
     },
     "leading-and-managing": {
+      "id": 3,
       "title": "Leading and managing",
       "chapter": "Strand 3:",
       "contents": [
@@ -121,6 +129,7 @@
       "image": "strand3"
     },
     "specialist-skills": {
+      "id": 4,
       "title": "Specialist skills",
       "chapter": "Strand 4:",
       "contents": [
@@ -133,6 +142,7 @@
       "image": "strand4"
     },
     "domain-knowledge": {
+      "id": 5,
       "title": "Domain knowledge",
       "chapter": "Strand 5:",
       "contents": [

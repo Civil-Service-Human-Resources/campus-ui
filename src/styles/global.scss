@@ -134,11 +134,11 @@
   line-height: 120%;
 
   &.semi {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
 
   @include breakpointup(large) {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
 
     &.semi {
       font-size: 1.5rem;
