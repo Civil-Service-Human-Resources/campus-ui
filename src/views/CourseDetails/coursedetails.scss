@@ -1,0 +1,51 @@
+@import '../../styles/settings';
+
+.campus-course-details {
+  padding-top: 0.5rem;
+
+  .campus-section-title {
+    margin-top: 1.625rem;
+    margin-bottom: 1.625rem;
+  }
+
+  &__content {
+    &-left {
+      .view-course {
+        display: none;
+        margin-top: 1.625rem;
+        text-decoration: underline;
+      }
+    }
+
+    &-right {
+      padding-top: 1.75rem;
+    }
+
+    .view-course-mobile {
+      margin-top: 1.625rem;
+      margin-bottom: 1rem;
+    }
+
+    @include breakpointup(large) {
+      display: flex;
+      gap: 3.25rem;
+
+      &-left {
+        flex: 1;
+
+        .view-course {
+          display: block;
+          margin-bottom: 1rem;
+        }
+      }
+
+      &-right {
+        max-width: 380px;
+      }
+
+      .view-course-mobile {
+        display: none;
+      }
+    }
+  }
+}

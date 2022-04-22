@@ -1,0 +1,33 @@
+@import '../../styles/settings';
+
+.campus-modulelist-wrapper {
+  .campus-module-item {
+    min-width: 380px;
+    border-radius: 4px 4px 0px 0px;
+    border: 1px solid $gray;
+
+    .campus-module-property {
+      font-size: 14px;
+      padding: 1.25rem 1rem;
+      border-top: 1px solid $gray;
+
+      span {
+        font-weight: 700;
+        padding-right: 4px;
+      }
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      padding-top: 1.25rem;
+      background: $pagination-actived;
+      border-radius: 4px 4px 0px 0px;
+    }
+
+    + .campus-module-item {
+      margin-top: 1.25rem;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import '../../styles/settings';
+
+.campus-strand-details {
+  &__content {
+    padding-top: 10px;
+    padding-bottom: 1.75rem;
+  }
+
+  .campus-section-title {
+    padding-top: 0.875rem;
+    padding-bottom: 2rem;
+  }
+}

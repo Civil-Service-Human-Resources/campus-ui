@@ -2,22 +2,6 @@
 @import 'foundation-sites/scss/foundation';
 
 .campus-about-page {
-  @include breakpointup(medium) {
-    margin-top: 2.5rem;
-  }
-
-  .campus-breadcrumbs {
-    @include breakpointup(xlarge) {
-      margin-right: 3.375rem;
-    }
-
-    @include breakpointdown(medium) {
-      .breadcrumbs {
-        padding-bottom: 0px !important;
-      }
-    }
-  }
-
   .campus-about-inner {
     @include breakpointup(medium) {
       padding-top: 1.5rem;

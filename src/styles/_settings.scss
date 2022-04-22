@@ -17,21 +17,19 @@ $strands-palette: (
 
 $strands-buttons-palette: (
   analysis: #206036,
-  commercial: #205D86,
-  communications: #664AB9,
-  digital: #FF645C,
-  finance: #D2326F,
-  hr: #B8572E,
-  operational: #CB3625,
-  policy: #29754F,
-  project: #5F1169,
-  property: #5871AD,
-  security: #002E99,
-  science: #756C6C,
+  commercial: #205d86,
+  communications: #664ab9,
+  digital: #ff645c,
+  finance: #d2326f,
+  hr: #b8572e,
+  operational: #cb3625,
+  policy: #29754f,
+  project: #5f1169,
+  property: #5871ad,
+  security: #002e99,
+  science: #756c6c,
   all: #990000,
 );
-
-
 
 $foundation-palette: (
   primary: #d2377e,
@@ -44,6 +42,7 @@ $foundation-palette: (
 $white: #ffffff;
 $white90: rgba(255, 255, 255, 0.9);
 $black: #000000;
+$gray: #e5e5e5;
 
 $linkColor: #1c7397;
 $highlight-color: #ca3887;
@@ -55,6 +54,10 @@ $footer-border-color: #b1b4b6;
 $menu-active-color: #6c757d;
 $breadcrumbs-background: #f8f9fa;
 $strands-title-color: #68cd00;
+$course-item-border: #dee2e6;
+$course-title-color: #007bff;
+$pagination-disabled: #abb5be;
+$pagination-actived: #ffb700;
 
 $button-sizes: (
   tiny: 0.6rem,
