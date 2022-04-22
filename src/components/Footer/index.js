@@ -12,15 +12,9 @@ export const Footer = () => {
           <div className="campus-footer__meta__item">
             <Menu className="campus-menu">
               <MenuItem>
-                <Link to="/cookie-policy">Cookie policy </Link>
-              </MenuItem>
-              <MenuItem>
                 <Link to="/accessibility-statement">
                   Accessibility statement
                 </Link>
-              </MenuItem>
-              <MenuItem>
-                <Link to="/privacy">Privacy</Link>
               </MenuItem>
             </Menu>
             <span>
@@ -39,10 +33,15 @@ export const Footer = () => {
             </span>
           </div>
           <div className="campus-footer__meta__item">
-            <Link to="/" className="campus-footer__copyright-logo">
+            <a
+              rel="noreferrer"
+              href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+              className="campus-footer__copyright-logo"
+              target="_blank"
+            >
               <img src={footerlogo} alt="" />
               <p>© Crown copyright</p>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

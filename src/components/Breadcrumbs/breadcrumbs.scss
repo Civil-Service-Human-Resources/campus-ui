@@ -4,6 +4,14 @@
 .campus-breadcrumbs {
   background: $breadcrumbs-background;
 
+  @include breakpointup(medium) {
+    margin-top: 2.5rem;
+  }
+
+  @include breakpointup(xlarge) {
+    margin-right: 3.375rem;
+  }
+
   .breadcrumbs {
     @include breadcrumbs-container;
     @include padding(0.75, 1.25, 0.75, 1.25);

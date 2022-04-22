@@ -1,0 +1,21 @@
+{
+  "strandId": 1,
+  "category_ref": "category_ref",
+  "courses": [
+    {
+      "source": "csl",
+      "id": "courseId",
+      "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"
+    },
+    {
+      "source": "csl",
+      "id": "courseId1",
+      "shortDescription": "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy."
+    },
+    {
+      "source": "csl",
+      "id": "courseId2",
+      "shortDescription": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
+    }
+  ]
+}

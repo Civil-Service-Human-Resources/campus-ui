@@ -32,6 +32,7 @@
     line-height: 1.2;
     color: $white;
     min-height: 74px;
+    cursor: pointer;
 
     @include breakpointdown(mobile) {
       min-height: 54px;

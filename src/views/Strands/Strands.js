@@ -1,5 +1,6 @@
-import { useContext, useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useContext, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { AppContext } from '../../context';
 import { getCopy } from '../../copytable';
 import { DeviceContext } from '../../context/DeviceContext';
 import { Breadcrumbs } from '../../components/Breadcrumbs';
@@ -14,25 +15,35 @@ const copy = getCopy('learningStrands');
 
 export const Strands = () => {
   const { slug } = useParams();
-  const [categories, setCategories] = useState([]);
+  const navigate = useNavigate();
+  const { strandCategories, setStrandCategories } = useContext(AppContext);
   const { mediumSize } = useContext(DeviceContext);
 
   const learningStrand = copy[slug];
   const breadcrumbs = copy.breadcrumbs;
 
+  const strandId = learningStrand && learningStrand.id;
+
+  const handleClickCategory = (cat) => {
+    if (strandId) {
+      const catRef = cat.toLowerCase().replace(/\s/g, '_');
+      navigate(`/strand/${slug}/category/${catRef}`);
+    }
+  };
+
   useEffect(() => {
-    if (learningStrand && learningStrand.id) {
+    if (strandId) {
       (async () => {
         try {
-          const response = await getStrandCategoriesApi(learningStrand.id);
+          const response = await getStrandCategoriesApi(strandId);
           const { categoriesToDisplay } = response;
-          setCategories(categoriesToDisplay);
+          setStrandCategories(categoriesToDisplay);
         } catch (error) {
-          setCategories([]);
+          setStrandCategories([]);
         }
       })();
     }
-  }, [learningStrand]);
+  }, [strandId, setStrandCategories]);
 
   if (!learningStrand) {
     return 'Not Found Strand';
@@ -57,7 +68,10 @@ export const Strands = () => {
               </div>
             )}
           </div>
-          <StrandButtons categories={categories} />
+          <StrandButtons
+            onClick={handleClickCategory}
+            categories={Object.values(strandCategories)}
+          />
           {mediumSize && <StrandImage imageName={learningStrand.image} />}
         </div>
       </div>

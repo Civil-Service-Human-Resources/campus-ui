@@ -1,0 +1,74 @@
+@import '../../styles/settings';
+
+.campus-pagination {
+  padding: 2.125rem 0px;
+
+  ul {
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    background: $white;
+
+    li {
+      list-style: none;
+      line-height: 1;
+      cursor: pointer;
+      color: $course-title-color;
+      padding: 0.75rem 0.875rem;
+      border: 1px solid $course-item-border;
+
+      span {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      &:first-child {
+        border-radius: 4px 0px 0px 4px;
+      }
+
+      &:last-child {
+        border-radius: 0px 4px 4px 0px;
+      }
+
+      &.disabled {
+        cursor: not-allowed;
+        color: $pagination-disabled;
+      }
+
+      &:hover,
+      &.active {
+        &:not(.disabled) {
+          color: $black;
+          border-color: transparent;
+          background-color: $pagination-actived;
+        }
+      }
+    }
+  }
+
+  &__item {
+    width: 23px;
+    height: 23px;
+    border: 1px solid #ececff;
+    border-radius: 4px;
+
+    color: #ececff;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover,
+    &.active {
+      &:not(.disabled) {
+        background-color: #fabf88;
+        border-color: transparent;
+        color: #262626;
+      }
+    }
+
+    &.disabled {
+      cursor: not-allowed;
+    }
+  }
+}

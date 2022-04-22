@@ -9,8 +9,8 @@ export const Breadcrumbs = ({ list }) => {
       role="navigation"
     >
       <ul className="breadcrumbs">
-        {list?.map((item) => (
-          <li key={item.label}>
+        {list?.map((item, index) => (
+          <li key={index}>
             {item.link ? (
               <Link to={item.link}>{item.label}</Link>
             ) : (
