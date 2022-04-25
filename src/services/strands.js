@@ -18,3 +18,15 @@ export const getCourseDetailApi = async (courseId) => {
     url: `/learning_materials/csl/${courseId}`,
   });
 };
+
+/**
+ * @param {string} query
+ * @param {number} page
+ * @returns
+ */
+export const getSearchApi = async (query, page = 0) => {
+  return client.callApi({
+    url: `/search`,
+    params: { query, page },
+  });
+};

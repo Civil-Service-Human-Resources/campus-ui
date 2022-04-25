@@ -16,7 +16,16 @@ export const Hero = ({ copy }) => {
             <Button>{button}</Button>
           </div>
           <div className="campus-hero-media">
-            <img src={thumbnail} alt="Welcome to Campus" />
+            {/* <img src={thumbnail} alt="Welcome to Campus" /> */}
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube-nocookie.com/embed/yAr0bb17Gr0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
           </div>
         </div>
       </div>

@@ -1,0 +1,14 @@
+.campus-search-result {
+  .campus-strand-title {
+    padding-top: 12px;
+  }
+
+  &__list {
+    max-width: 730px;
+    margin-right: auto;
+
+    .search-result {
+      margin-bottom: 2.125rem;
+    }
+  }
+}
