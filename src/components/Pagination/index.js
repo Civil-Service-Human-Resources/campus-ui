@@ -9,7 +9,7 @@ export const Pagination = ({ showItems = 3, current, total, onChange }) => {
     throw new Error('showItems should be odd number');
   }
 
-  const center = Math.floor(showItems / 2);
+  const center = Math.ceil(showItems / 2);
   const currentItems = new Array(showItems)
     .fill(true)
     .map((_, i) => {

@@ -225,6 +225,18 @@
     "outcomes": "Learning outcomes",
     "overview": "Overview"
   },
+  "searchResult": {
+    "breadcrumbs": [
+      {
+        "link": "/",
+        "label": "Home"
+      },
+      {
+        "label": "Search"
+      }
+    ],
+    "title": "Search for a course"
+  },
   "about": {
     "breadcrumbs": [
       {

@@ -42,6 +42,10 @@ export const StrandDetails = () => {
     }
   }, [strand, catRef, page]);
 
+  if (!details) {
+    return null;
+  }
+
   return (
     <div className="campus-strand-details">
       <div className="campus-container">
@@ -59,7 +63,7 @@ export const StrandDetails = () => {
           <CourseList courses={details?.results || []} strandSlug={slug} />
           <Pagination
             current={page}
-            total={Math.floor(details?.results?.length / 10)}
+            total={Math.ceil(details?.results?.length / 10)}
             onChange={setPage}
           />
         </div>

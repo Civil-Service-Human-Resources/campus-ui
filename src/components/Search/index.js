@@ -6,7 +6,14 @@ import { DeviceContext } from '../../context';
 import { useTopOffest } from '../../hooks';
 import './search.scss';
 
-export const Search = ({ copy }) => {
+export const Search = ({
+  copy,
+  className,
+  value = '',
+  onChange = () => {},
+  onSearch,
+  ...rest
+}) => {
   const { palceholder, button } = copy;
   const [isOpen, setIsOpen] = useState(false);
   const { xlargeSize } = useContext(DeviceContext);
@@ -21,14 +28,25 @@ export const Search = ({ copy }) => {
     if (isOpen) {
       base = `${base} opened`;
     }
+    if (className) {
+      base = `${base} ${className}`;
+    }
     return base;
-  }, [isOpen]);
+  }, [isOpen, className]);
 
   return (
     <div className={classes}>
       <div className="campus-searchinput-wrapper" style={styles}>
-        <input type="search" placeholder={palceholder} />
-        <Button className="search-button semi">{button}</Button>
+        <input
+          {...rest}
+          type="search"
+          value={value}
+          onChange={onChange}
+          placeholder={palceholder}
+        />
+        <Button onClick={onSearch} className="search-button semi">
+          {button}
+        </Button>
       </div>
       {xlargeSize && (
         <div className="search-button__mobile" onClick={toggleSearchBox}>
