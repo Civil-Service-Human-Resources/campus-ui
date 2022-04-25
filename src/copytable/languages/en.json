@@ -58,7 +58,7 @@
       ],
       "items": [
         {
-          "color": "navy",
+          "color": "green",
           "title": "Strand 1:",
           "description": "Foundations of public administration",
           "path": "/learning-strands/foundations-of-public-administration"
@@ -76,13 +76,13 @@
           "path": "/learning-strands/leading-and-managing"
         },
         {
-          "color": "green",
+          "color": "pink",
           "title": "Strand 4:",
           "description": "Specialist skills",
           "path": "/learning-strands/specialist-skills"
         },
         {
-          "color": "pink",
+          "color": "orange",
           "title": "Strand 5:",
           "description": "Domain knowledge",
           "path": "/learning-strands/domain-knowledge"
