@@ -1,6 +1,5 @@
 import { Button } from 'react-foundation';
 import { Paragraphs } from '../Paragraph';
-import thumbnail from '../../assets/images/thumbnail.png';
 import './hero.scss';
 
 export const Hero = ({ copy }) => {
@@ -16,7 +15,6 @@ export const Hero = ({ copy }) => {
             <Button>{button}</Button>
           </div>
           <div className="campus-hero-media">
-            {/* <img src={thumbnail} alt="Welcome to Campus" /> */}
             <iframe
               width="560"
               height="315"
