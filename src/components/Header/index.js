@@ -4,6 +4,7 @@ import {
   useParams,
   useSearchParams,
   createSearchParams,
+  Link,
 } from 'react-router-dom';
 import { Navigation } from '../Navigation';
 import { Search } from '../Search';
@@ -49,7 +50,9 @@ export const Header = () => {
       <div className="campus-container">
         <div className="topbar">
           <div className="top-bar-left">
-            <img src={campuslogo} alt="Campus" />
+            <Link to="/">
+              <img src={campuslogo} alt="Goverment Campus" />
+            </Link>
           </div>
           <div className="top-bar-right">
             <Navigation
