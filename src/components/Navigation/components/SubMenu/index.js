@@ -45,7 +45,7 @@ export const SubMenu = ({ menu, itemClassName }) => {
   return (
     <li onClick={openSubMenu} ref={wrapper} className={classes}>
       <CaretDownIcon className="campus-submenu__icon" />
-      <span className="campus-submenu__text">{menu.label}</span>
+      <button className="campus-submenu__text">{menu.label}</button>
       <div className="campus-submenu" style={{ ...offest, ...padding }}>
         <MenuList menus={menu.subMenu} className="campus-menu" />
       </div>
