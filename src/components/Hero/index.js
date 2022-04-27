@@ -1,4 +1,4 @@
-import { Button } from 'react-foundation';
+import { Link } from 'react-router-dom';
 import { Paragraphs } from '../Paragraph';
 import './hero.scss';
 
@@ -12,7 +12,10 @@ export const Hero = ({ copy }) => {
           <div className="campus-intro">
             <h2 className="campus-title">{title}</h2>
             <Paragraphs className="semi">{intro}</Paragraphs>
-            <Button>{button}</Button>
+
+            <Link className="button" to="/about">
+              {button}
+            </Link>
           </div>
           <div className="campus-hero-media">
             <iframe
