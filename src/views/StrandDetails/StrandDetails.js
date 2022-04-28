@@ -11,7 +11,6 @@ import { getStrandDetailApi } from '../../services/strands';
 import './stranddetails.scss';
 
 const straindCopy = getCopy('learningStrands');
-const pageCopy = getCopy('careerDevelopment');
 
 export const StrandDetails = () => {
   const { slug, catRef } = useParams();
@@ -20,14 +19,16 @@ export const StrandDetails = () => {
   const { strandCategories } = useContext(AppContext);
 
   const strand = straindCopy[slug];
+
+  const category = (strandCategories[catRef] || catRef)
+    .split('_')
+    .map((x) => x.charAt(0).toUpperCase() + x.slice(1))
+    .join(' ');
+
   const breadcrumbs = useMemo(() => {
     if (!strand) {
       return [];
     }
-    const category = (strandCategories[catRef] || catRef)
-      .split('_')
-      .map((x) => x.charAt(0).toUpperCase() + x.slice(1))
-      .join(' ');
 
     return strand.breadcrumbs.concat({ label: category });
   }, [strand, catRef, strandCategories]);
@@ -55,7 +56,7 @@ export const StrandDetails = () => {
             <h1>{strand.chapter}</h1>
             <h2>{strand.title}</h2>
           </div>
-          <div className="campus-section-title">{pageCopy.title}</div>
+          <div className="campus-section-title">{category}</div>
           <FilterResult
             total={details?.totalResults}
             count={details?.results?.length}

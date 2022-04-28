@@ -39,6 +39,8 @@ $foundation-palette: (
   alert: #cc4b37,
 );
 
+$body-font-family: Arial, Helvetica, sans-serif;
+
 $white: #ffffff;
 $white90: rgba(255, 255, 255, 0.9);
 $black: #000000;
@@ -88,6 +90,8 @@ $anchor-color: #0b0c0c;
 // $anchor-color-hover
 $anchor-text-decoration: underline;
 $anchor-text-decoration-hover: underline;
+
+
 
 @function get-breakpoint($key) {
   @if map-has-key($breakpoints, $key) {
