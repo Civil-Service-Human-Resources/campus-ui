@@ -6,6 +6,7 @@ import { FilterResult } from '../../components/FilterResult';
 import { CourseList } from '../../components/CourseList';
 import { Pagination } from '../../components/Pagination';
 import { getSearchApi } from '../../services/strands';
+import { usePageCount } from '../../hooks';
 import { getCopy } from '../../copytable';
 
 import './searchresult.scss';
@@ -18,6 +19,7 @@ export const SearchResult = () => {
   const [data, setData] = useState();
   const [searchTerm, setSearchTerm] = useState('');
   const [searchParams, setSearchParams] = useSearchParams();
+  const [current, displays, total, totalPages] = usePageCount(data);
 
   const term = searchParams.get('term');
   const page = searchParams.get('page');
@@ -72,18 +74,12 @@ export const SearchResult = () => {
             onKeyUp={handleKeyup}
             onSearch={handleSearch}
           />
-          {data && (
-            <FilterResult
-              count={(data?.result || []).length}
-              total={data?.totalResults || 0}
-              term={term}
-            />
-          )}
+          {data && <FilterResult count={displays} total={total} term={term} />}
           <CourseList courses={data?.results || []} strandSlug={slug} />
           {data && (
             <Pagination
-              current={data?.page || 0}
-              total={Math.ceil(data?.totalResults / 10)}
+              current={current}
+              total={totalPages}
               onChange={setPageNum}
             />
           )}
