@@ -6,6 +6,7 @@ import { CourseList } from '../../components/CourseList';
 import { Pagination } from '../../components/Pagination';
 import { AppContext } from '../../context';
 import { getCopy } from '../../copytable';
+import { usePageCount } from '../../hooks';
 import { getStrandDetailApi } from '../../services/strands';
 
 import './stranddetails.scss';
@@ -18,20 +19,22 @@ export const StrandDetails = () => {
   const [details, setDetails] = useState();
   const { strandCategories } = useContext(AppContext);
 
+  const category = useMemo(() => {
+    return (strandCategories[catRef] || catRef)
+      .split('_')
+      .map((x) => x.charAt(0).toUpperCase() + x.slice(1))
+      .join(' ');
+  }, [catRef, strandCategories]);
+
   const strand = straindCopy[slug];
-
-  const category = (strandCategories[catRef] || catRef)
-    .split('_')
-    .map((x) => x.charAt(0).toUpperCase() + x.slice(1))
-    .join(' ');
-
   const breadcrumbs = useMemo(() => {
     if (!strand) {
       return [];
     }
-
     return strand.breadcrumbs.concat({ label: category });
-  }, [strand, catRef, strandCategories]);
+  }, [strand, category]);
+
+  const [current, displays, total, totalPages] = usePageCount(details);
 
   useEffect(() => {
     if (catRef && strand) {
@@ -57,16 +60,9 @@ export const StrandDetails = () => {
             <h2>{strand.title}</h2>
           </div>
           <div className="campus-section-title">{category}</div>
-          <FilterResult
-            total={details?.totalResults}
-            count={details?.results?.length}
-          />
+          <FilterResult total={total} count={displays} />
           <CourseList courses={details?.results || []} strandSlug={slug} />
-          <Pagination
-            current={page}
-            total={Math.ceil(details?.results?.length / 10)}
-            onChange={setPage}
-          />
+          <Pagination current={current} total={totalPages} onChange={setPage} />
         </div>
       </div>
     </div>

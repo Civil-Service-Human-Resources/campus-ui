@@ -1,28 +1,25 @@
+import { useMemo } from 'react';
 import './pagination.scss';
 
-export const Pagination = ({ showItems = 3, current, total, onChange }) => {
+export const Pagination = ({ current, total, onChange }) => {
+  const items = useMemo(() => {
+    const createPages = () => {
+      if (current <= 1) {
+        return [current, current + 1, current + 2];
+      }
+      if (current >= total && total > 2) {
+        return [current - 2, current - 1, current];
+      }
+      return [current - 1, current, current + 1];
+    };
+    const pages = createPages();
+
+    return pages.filter((x) => x <= total);
+  }, [current, total]);
+
   if (total <= 1) {
     return null;
   }
-
-  if (showItems % 2 === 0) {
-    throw new Error('showItems should be odd number');
-  }
-
-  const center = Math.ceil(showItems / 2);
-  const currentItems = new Array(showItems)
-    .fill(true)
-    .map((_, i) => {
-      const page = current + (i - center);
-      if (current < center) {
-        return page + center - current;
-      }
-      if (current > total - center) {
-        return page - center + total - current;
-      }
-      return page;
-    })
-    .filter((x) => x < total && x >= 0);
 
   const prevDisable = current <= 0;
   const nextDisable = current >= total - 1;
@@ -51,13 +48,13 @@ export const Pagination = ({ showItems = 3, current, total, onChange }) => {
         <li onClick={prevPage} className={prevDisable ? 'disabled' : ''}>
           <span>Prev</span>
         </li>
-        {currentItems.map((n) => (
+        {items.map((n) => (
           <li
             key={n}
             className={n === current ? 'active' : ''}
             onClick={goToPage(n)}
           >
-            <span>{n + 1}</span>
+            <span>{n}</span>
           </li>
         ))}
         <li onClick={nextPage} className={nextDisable ? 'disabled' : ''}>
