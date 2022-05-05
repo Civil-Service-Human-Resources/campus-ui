@@ -16,6 +16,11 @@ export const Footer = () => {
                   Accessibility statement
                 </Link>
               </MenuItem>
+              <MenuItem>
+                <a href="mailto:support@governmentcampus.co.uk?subject=Campus frontend to CSL support request">
+                  Contact us
+                </a>
+              </MenuItem>
             </Menu>
             <span>
               <LicenceIcon />
