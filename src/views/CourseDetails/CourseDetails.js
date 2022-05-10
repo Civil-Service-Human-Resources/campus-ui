@@ -59,14 +59,14 @@ export const CourseDetails = () => {
             </div>
             <div className="campus-course-details__section">
               <div className="campus-section-title">{courseCopy.overview}</div>
-              <CampusContent contents={[courseDetail?.description || '']} />
+              <CampusContent contents={courseDetail?.description} />
             </div>
             {courseDetail?.outcomes && (
               <div className="campus-course-details__section">
                 <div className="campus-section-title">
                   {courseCopy.outcomes}
                 </div>
-                <CampusContent contents={[courseDetail?.outcomes || '']} />
+                <CampusContent contents={courseDetail?.outcomes} />
               </div>
             )}
 

@@ -1,3 +1,5 @@
+import { Fragment } from 'react';
+import isObject from 'lodash.isobject';
 import { Paragraphs } from '../Paragraph';
 
 import './campuscontent.scss';
@@ -7,6 +9,31 @@ export const CampusContent = ({ contents }) => {
     <div className="campus-content-wrapper">
       <Paragraphs>
         {contents?.map((content, index) => {
+          if (isObject(content)) {
+            if (content.label === 'paragraph') {
+              return (
+                <Fragment key={index}>
+                  {content.content?.map((c, i) => (
+                    <p key={i}>
+                      <span dangerouslySetInnerHTML={{ __html: c || '' }} />
+                    </p>
+                  ))}
+                </Fragment>
+              );
+            }
+            if (content.label === 'bullets') {
+              return (
+                <ul key={index}>
+                  {content.content?.map((c, i) => (
+                    <li key={i}>
+                      <span dangerouslySetInnerHTML={{ __html: c || '' }} />
+                    </li>
+                  ))}
+                </ul>
+              );
+            }
+            return '';
+          }
           if (Array.isArray(content)) {
             return (
               <ul key={index}>
