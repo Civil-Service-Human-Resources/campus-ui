@@ -2,9 +2,12 @@
 
 .campus-modulelist-wrapper {
   .campus-module-item {
-    min-width: 380px;
     border-radius: 4px 4px 0px 0px;
     border: 1px solid $gray;
+
+    @include breakpointup(large) {
+      min-width: 380px;
+    }
 
     .campus-module-property {
       font-size: 14px;
