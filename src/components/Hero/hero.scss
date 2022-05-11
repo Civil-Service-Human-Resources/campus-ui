@@ -15,11 +15,16 @@
 
       .campus-hero-media {
         text-align: center;
+        
 
         iframe {
           width: 100%;
           height: auto;
         }
+      }
+
+      .campus-intro {
+        margin-bottom: 1.25rem;
       }
 
       button {
@@ -50,6 +55,7 @@
       border-top-left-radius: 0px;
       border-bottom-left-radius: 0px;
       @include padding(1.25, 1.5, 1.5, 2);
+
 
       .campus-title {
         margin-top: 0rem;
