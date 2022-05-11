@@ -1,7 +1,6 @@
 import { Fragment } from 'react';
-import isObject from 'lodash.isobject';
-import isArray from 'lodash.isarray';
 import { Paragraphs } from '../Paragraph';
+import { isArray, isObject } from 'lodash';
 
 import './campuscontent.scss';
 
