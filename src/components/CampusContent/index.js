@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
-import isObject from 'lodash.isobject';
 import { Paragraphs } from '../Paragraph';
+import { isArray, isObject } from 'lodash';
 
 import './campuscontent.scss';
 
@@ -32,9 +32,8 @@ export const CampusContent = ({ contents }) => {
                 </ul>
               );
             }
-            return '';
           }
-          if (Array.isArray(content)) {
+          if (isArray(content)) {
             return (
               <ul key={index}>
                 {content.map((liContent, liIndex) => (
