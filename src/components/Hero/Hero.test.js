@@ -8,7 +8,7 @@ const renderComponent = () => {
   return render(<Hero copy={copy.hero} />);
 };
 
-describe('Hero', () => {
+describe('Hero component', () => {
   it('should render component', () => {
     renderComponent();
     expect(screen.getByTestId(testId)).toBeInTheDocument();
