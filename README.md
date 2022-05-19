@@ -1,8 +1,8 @@
 # Getting Started with Campus Online
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Current technologies used in the project are `ReactJS`, `FoundationCSS` & `React-Testing-Library`
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Current technologies used in the project are `ReactJS`, `FoundationCSS` & `React-Testing-Library`.
 
-[Campus Online](public/web-screenshot.png?raw=true 'Campus Online')
+![Screenshot](public/web-screenshot.png)
 
 ## Setup
 
