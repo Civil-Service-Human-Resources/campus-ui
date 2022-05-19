@@ -2,11 +2,13 @@ import { Link } from 'react-router-dom';
 import { Paragraphs } from '../Paragraph';
 import './hero.scss';
 
+export const testId = 'hero';
+
 export const Hero = ({ copy }) => {
   const { title, intro, button } = copy;
 
   return (
-    <div className="campus-hero">
+    <div className="campus-hero" data-testid={testId}>
       <div className="campus-container">
         <div className="campus-hero-content">
           <div className="campus-intro">
