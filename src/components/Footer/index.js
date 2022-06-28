@@ -21,6 +21,11 @@ export const Footer = () => {
                   Contact us
                 </a>
               </MenuItem>
+              <MenuItem>
+                <a href="https://civilserviceinsight.qualtrics.com/jfe/form/SV_bQNQpUPukIG1PWS">
+                  Provide feedback on this website
+                </a>
+              </MenuItem>
             </Menu>
             <span>
               <LicenceIcon />
