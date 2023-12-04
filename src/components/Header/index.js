@@ -54,7 +54,7 @@ export const Header = () => {
               <img src={campuslogo} alt="Goverment Campus" />
             </Link>
           </div>
-          <div className="top-bar-right">
+          <div className="top-bar-right" style={{display: "none"}}>
             <Navigation
               menus={headerCopy.menus}
               trigger={headerCopy.mtrigger}
