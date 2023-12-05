@@ -10,7 +10,7 @@ export const Footer = () => {
       <div className="campus-container">
         <div className="campus-footer__meta">
           <div className="campus-footer__meta__item">
-            <Menu className="campus-menu">
+            <Menu className="campus-menu" style={{display: "none"}}>
               <MenuItem>
                 <Link to="/accessibility-statement">
                   Accessibility statement
